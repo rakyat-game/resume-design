@@ -206,6 +206,179 @@
 </script>
 
 <style lang="scss" scoped>
-  /* CSS remains exactly the same as it contains no Chinese text */
-  /* ... existing CSS code ... */
+  .ai-model-select-cpt {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Positioning for model selector */
+    .content-box {
+      font-size: 12px;
+      color: #777777;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: none;
+      margin-bottom: 15px;
+      p {
+        height: 40px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #fb8444;
+        img {
+          margin-left: 5px;
+        }
+      }
+      .jb-num {
+        font-size: 18px;
+        font-weight: 600;
+        background: -webkit-linear-gradient(top, #ff0000, #00ff00); /* Linear gradient */
+        /* For cross-browser support */
+        background-clip: text; /* Clip background to text */
+        -webkit-text-fill-color: transparent; /* Transparent text fill */
+        letter-spacing: 1px;
+      }
+      .content {
+        font-size: 14px;
+        color: #333333;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+    .title {
+      font-size: 16px;
+      color: #009a74;
+      position: relative;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      letter-spacing: 1px;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 3px;
+        background-color: #009a74;
+        left: -10px;
+      }
+      .get-bi-method {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        height: 25px;
+        background-color: #70f5c4;
+        border-radius: 15px;
+        font-size: 13px;
+        transition: all 0.3s;
+        margin: 0 auto;
+        margin-left: 15px;
+        cursor: pointer;
+        letter-spacing: 1px;
+        user-select: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .model-selector {
+      width: 100%;
+      margin-bottom: 20px;
+      .el-select {
+        width: 100%;
+      }
+      .model-tips {
+        font-size: 12px;
+        color: #999;
+        margin-top: 8px;
+        margin-left: 10px;
+      }
+    }
+    .history-optimize-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 5px 0;
+      width: 110px;
+      background-color: #fbfbfb;
+      font-size: 12px;
+      color: #8d8a8a;
+      user-select: none;
+      &:hover {
+        background-color: #eee;
+        border-radius: 3px;
+        color: green;
+      }
+      span {
+        margin-left: 6px;
+      }
+    }
+    .el-radio-group {
+      margin: 20px 0 0 10px;
+    }
+    .el-radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      padding: 10px;
+      transition: all 0.3s ease;
+      border: 1px solid #dcdfe6;
+      position: relative;
+
+      &:hover {
+        background-color: #f5f7fa;
+        border-color: #4e97fb;
+      }
+
+      &.is-checked {
+        background-color: #e8f4ff;
+        border-color: #4e97fb;
+
+        .el-radio__label {
+          color: #4e97fb;
+        }
+      }
+
+      :deep(.el-radio__label) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        color: #606266;
+
+        .free-tag {
+          margin-left: 10px;
+          padding: 4px 8px;
+          background-color: #e8f5e9;
+          color: #4caf50;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .tips {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          font-size: 14px;
+          color: #4e97fb;
+          font-weight: bold;
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+      .vip-icon {
+        position: absolute;
+        top: -12px;
+        right: -6px;
+      }
+    }
+  }
 </style>
