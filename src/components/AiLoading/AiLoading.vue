@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
   .tech-loading {
-    // background-color: white; // 白色背景
+    // background-color: white; // White background (commented out)
     overflow: hidden;
     position: relative;
     min-height: 200px;
@@ -32,7 +32,7 @@
     top: 0;
     left: 0;
 
-    // 科技渐变背景
+    // Tech gradient background
     &:after {
       content: '';
       display: block;
@@ -44,7 +44,7 @@
     }
   }
 
-  // 为每个li设置旋转角度和动画延迟
+  // Set rotation and animation delay for each li element
   @for $i from 1 through 10 {
     .tech-loading li:nth-child(#{$i}) {
       transform: rotate(#{($i - 1) * 36}deg);
@@ -56,7 +56,7 @@
     }
   }
 
-  // 动画效果
+  // Animation effects
   .tech-loading li {
     animation: dotBounce 2.5s infinite ease-in-out;
   }
